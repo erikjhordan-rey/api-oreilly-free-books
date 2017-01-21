@@ -1,4 +1,7 @@
 # api-oreilly-books-free
+
+The main goal of this project is practiced web scraping technical and help other people to do more easy the download awesome books of programming section.
+
 Web Scraping to download books of the section "programming" from [o'reilly free books](http://www.oreilly.com/programming/free/).
 
 

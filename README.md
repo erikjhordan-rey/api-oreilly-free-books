@@ -17,10 +17,10 @@ O'reilly Free Books API REST
 --------------------------
 https://api-oreilly-free.appspot.com/oreilly-free
 
-### O'reilly Programming
+### O'reilly Programming All
 ![](./art/book_1.png)
 
-### O'reilly Download
+### O'reilly Programming Download
 ![](./art/book_2.png)
 Install
 -------

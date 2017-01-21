@@ -7,7 +7,7 @@ Libraries used on the sample project
 * [BS4 - BeautifulSoup][1]
 
 
-# Demo - O'reilly Free Books API REST
+# O'reilly Free Books API REST
 https://api-oreilly-free.appspot.com/oreilly-free
 
 Do you want to contribute?

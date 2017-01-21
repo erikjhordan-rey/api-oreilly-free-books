@@ -2,6 +2,13 @@
 Web Scraping to download books of the section "programming" from o'reilly free books
 
 
+Libraries used on the sample project
+------------------------------------
+* [BS4 - BeautifulSoup][1]
+
+
+# Demo - O'reilly Free Books API REST
+https://api-oreilly-free.appspot.com/oreilly-free
 
 Do you want to contribute?
 --------------------------
@@ -13,3 +20,6 @@ Developed By
 ------------
 
 * Erik González  - <erikcaffrey10@gmail.com>
+
+
+[1]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/

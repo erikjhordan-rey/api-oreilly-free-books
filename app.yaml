@@ -1,17 +1,22 @@
-application: api-oreilly-free
-version: 1
-runtime: python27
+# GCP Settings
 api_version: 1
+skip_files:
+  - ^(.*/)?.*\.py[co]$
+
+# Runtime
+runtime: python27
 threadsafe: yes
 
+# URLs
 handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
 
-- url: .*
-  script: main.app
+  # Favicon
+  - url: /favicon\.ico
+    static_files: static/img/favicon.ico
+    upload: bp_content/themes/default/static/favicon.ico
+    secure: always
 
-libraries:
-- name: webapp2
-  version: "2.5.2"
+  # Main URLs module
+  - url: /.*
+    script: main.app
+    secure: always

@@ -1,0 +1,4 @@
+cron:
+- description: daily summary job
+  url: /jobs/retrieve_books/
+  schedule: every 1 hours

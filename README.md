@@ -1,63 +1,59 @@
-api-oreilly-books-free
---------------------------
+# O'Reilly free programming books - Web API
 
-The main goal of this project is practiced web scraping technical and help other people to do more easy the download awesome books of programming section.
+This project was inspired in [erikcaffrey's](https://github.com/erikcaffrey/api-oreilly-free-books) web application project
+used for expose [O'Reilly free programming ebooks](http://www.oreilly.com/programming/free/) via a web API.
 
-Web Scraping to download books of the section "programming" from [o'reilly free books](http://www.oreilly.com/programming/free/).
+## How does it works?
 
+It is written in Python 2.7 using webapp2 and it's designed to be executed on [**Google App Engine**](https://cloud.google.com/appengine/).
+It also make use of [**Google Cloud Datastore**](https://cloud.google.com/datastore/) to persist books data and a there is
+a [**cron job**](https://cloud.google.com/appengine/docs/python/config/cron) scheduled to run every 1 hour to go to O'Reilly's website
+and update books data by doing web scrapping.
 
-Tools used on the sample project
-------------------------------------
-* [Python 2.7][0]
-* [App Engine][1]
-* [BS4 - BeautifulSoup][2]
-* [WebApp2][3]
+That's basically it.
 
-O'reilly Free Books API REST
---------------------------
-https://api-oreilly-free.appspot.com/oreilly-free
+## About the API
 
-### O'reilly Programming All
-![](./art/book_1.png)
+It is hosted on [https://oreilly-api.appspot.com/](https://oreilly-api.appspot.com/) and the main resource is
+[**/books**](https://oreilly-api.appspot.com/books) which after a GET request will expose you a
+JSON list with all available books. Each list element will look this:
 
-### O'reilly Programming Download
-![](./art/book_2.png)
+| Field       | Type        | Description                                                       |
+|-------------|-------------|-------------------------------------------------------------------|
+| title       | String      | Book title                                                        |
+| url         | String      | Book details URL                                                  |
+| thumbnail   | String      | Book thumbnail URL                                                |
+| description | String      | Book description                                                  |
+| category    | String      | Book category                                                     |
+| subcategory | String/null | Book subcategory. This can be either the subcategory name or null |
+| pdf         | String/null | Download URL (PDF). This can be either null or a URL              |
+| mobi        | String/null | Download URL (MOBI). This can be either null or a URL             |
+| epub        | String/null | Download URL (ePub). This can be either null or a URL             |
 
-Install
--------
-* Install App Engine
-* Install Google App Engine Launcher
-* Download project
-* file -> add existing application -> add -> run .
+## Usage
+These instructions will get you a copy of the project up and running on your local machine for development
+and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Do you want to contribute?
---------------------------
-Feel free to report or add any useful feature, I will be glad to improve it with your help!.
+1. Install Google App Engine SDK for Python from [https://cloud.google.com/appengine/downloads](https://cloud.google.com/appengine/downloads)
+2. Install lxml your local environment with: `$ pip install lxml==2.3
+3. Run with: `$ dev_appserver.py .`
 
-Developed By
-------------
+## Deployment
+Once you have set up your gcloud CLI in your local environment as well as your project in Google App Engine's console,
+you can simply run this for deployment.
 
-* Erik González  - <erikcaffrey10@gmail.com>
+```
+$ glcoud app deploy
+```
 
-License
--------
+# Built with
 
-    Copyright 2017 Erik Jhordan Rey 
+* [lxml](http://lxml.de/): Used for HTML processing
+* [webapp2](http://lxml.de/): Python Web micro-framework.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+## Contributors
 
-       http://www.apache.org/licenses/LICENSE-2.0
+* [pablotrinidad](https://github.com/pablotrinidad) (Pablo Trinidad)
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
-
-[0]: https://www.python.org/download/releases/2.7/
-[1]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
-[2]: https://cloud.google.com/appengine/docs/python/
-[3]: https://cloud.google.com/appengine/docs/python/getting-started/handling-user-input-form
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

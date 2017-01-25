@@ -4,7 +4,7 @@
 """Models - Books."""
 
 # App Engine Extensions
-from google.appengine.ext import ndb, db
+from google.appengine.ext import ndb
 
 
 class Category(ndb.Model):

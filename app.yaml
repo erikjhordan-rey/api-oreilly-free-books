@@ -20,3 +20,8 @@ handlers:
   - url: /.*
     script: main.app
     secure: always
+
+# Third Party Libraries
+libraries:
+  - name: lxml
+    version: "2.3"

@@ -19,8 +19,10 @@ import webapp2
 
 # Routes
 from config import routes
+from oreilly.cron_jobs import routes as cron_jobs_routes
 
 # App initialization.
 app = webapp2.WSGIApplication(debug=os.environ.get('DEBUG', 'prod') == 'dev')
 
 routes.add_routes(app)
+cron_jobs_routes.add_routes(app)

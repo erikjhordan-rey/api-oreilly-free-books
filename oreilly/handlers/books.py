@@ -6,12 +6,6 @@
 # Handlers
 from .base import APIHandler
 
-# Models
-from ..models.books import (
-    Book,
-    Category
-)
-
 
 class BooksListHandler(APIHandler):
     """Menu Handler."""

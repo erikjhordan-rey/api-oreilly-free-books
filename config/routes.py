@@ -6,8 +6,6 @@
 # WebApp 2
 from webapp2_extras.routes import RedirectRoute
 
-secure_scheme = 'https'
-
 from oreilly.handlers import api as api_handlers
 from oreilly.handlers import books as books_handlers
 
@@ -34,9 +32,8 @@ def get_routes():
     """Return routes."""
     return _routes
 
+
 def add_routes(app):
     """Add routes to app."""
-    if app.debug:
-        secure_scheme = 'http'
     for r in _routes:
         app.router.add(r)

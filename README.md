@@ -1,6 +1,6 @@
 # O'Reilly free programming books - Web API
 
-This project was inspired in [erikcaffrey's](https://github.com/erikcaffrey/api-oreilly-free-books) web application project
+This project was inspired in [erikcaffrey's](https://github.com/erikcaffrey/api-oreilly-free-books/tree/api-oreilly-free-v1) web application project
 used for expose [O'Reilly free programming ebooks](http://www.oreilly.com/programming/free/) via a web API.
 
 ## How does it works?
@@ -52,7 +52,7 @@ $ glcoud app deploy
 * [webapp2](http://lxml.de/): Python Web micro-framework.
 
 ## Contributors
-
+* [erikcaffrey](https://github.com/erikcaffrey)(Erik Jhordan Rey)
 * [pablotrinidad](https://github.com/pablotrinidad) (Pablo Trinidad)
 
 ## License

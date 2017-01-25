@@ -6,10 +6,18 @@
 # Handlers
 from .base import APIHandler
 
+# Models
+from ..models.books import Book
+
+# Serializers
+from .serializers import book_serializer
+
 
 class BooksListHandler(APIHandler):
-    """Menu Handler."""
+    """Books list Handler."""
 
     def get(self):
-        """Return API available methods."""
-        return self.reponse({'status': 'ok'})
+        """Return a list with all books."""
+        q = Book.query()
+        books = [book_serializer(b) for b in q]
+        return self.reponse(books)

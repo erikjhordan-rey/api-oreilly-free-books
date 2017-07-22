@@ -35,7 +35,7 @@ These instructions will get you a copy of the project up and running on your loc
 and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 1. Install Google App Engine SDK for Python from [https://cloud.google.com/appengine/downloads](https://cloud.google.com/appengine/downloads)
-2. Install lxml your local environment with: `$ pip install lxml==2.3
+2. Install lxml your local environment with: `$ pip install lxml==2.3`
 3. Run with: `$ dev_appserver.py .`
 
 ## Deployment
